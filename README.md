@@ -50,6 +50,7 @@ aws-iam-authenticator version
 
 ### Create EKS Cluster
 eksctl create cluster --name nginxcluster --nodes-min 1 --nodes-max 2 --alb-ingress-access --region ap-southeast-1 --node-type t2.medium --ssh-public-key cc-nasir
+eksctl create cluster --name nasir-nginx-cluster --nodes-min 1 --nodes-max 2 --alb-ingress-access --region ap-southeast-1 --vpc-public-subnets=subnet-0eed122751ceb5d7a,subnet-02c11d6933657211c --vpc-private-subnets=subnet-0a81ab3974f428260,subnet-0f62bde5cde2fbc99 --node-type t2.medium --ssh-public-key cc-nasir --profile cc
 
 kubectl get nodes
 
